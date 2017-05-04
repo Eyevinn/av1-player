@@ -129,6 +129,8 @@ int main(int argc, char **argv) {
     }
     while ((img = aom_codec_get_frame(&codec, &iter)) != NULL) {
       // TODO: Write output to display
+      // Push image on frame queue
+      // Video refresh loop (consume frame queue and display image in sync with master clock)
       ++frame_cnt;
     }
   }
